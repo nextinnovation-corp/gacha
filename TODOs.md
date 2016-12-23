@@ -1,11 +1,15 @@
 # My task manager
 
 ## current story
-None
-
+* Show error page
 
 
 ## Backlogs
-### research
+### Stories
+* Render hello, react component
+* Add login button on right upper side
 
-### infrastructure
+### Research
+
+### Infrastructure
+* Hot-reload server
