@@ -175,7 +175,8 @@
     }
   },
   "scripts": {
-    "dev": "babel-node server/index.js"
+    "dev": "babel-node server/index.js",
+    "postinstall": "npm prune"
   },
   "old_scripts": {
     "lint:js": "eslint src tools",
