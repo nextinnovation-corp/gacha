@@ -1,7 +1,7 @@
 # My task manager
 
 ## current story
-* Show error page
+
 
 
 ## Backlogs
@@ -12,4 +12,3 @@
 ### Research
 
 ### Infrastructure
-* Hot-reload server
