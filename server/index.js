@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import express from 'express';
 import syncDatabase from '../scripts/syncDatabase';
-import Error from '../client/components/Error';
+import Html from '../client/components/Html';
 
 function runServer() {
   const app = express();
 
   app.get('*', async (req, res) => {
-    const html = ReactDOMServer.renderToStaticMarkup(<Error />);
+    const html = ReactDOMServer.renderToStaticMarkup(
+      <Html title="Error">
+        Hello, error!
+      </Html>,
+    );
     res.status(500);
     res.send(`<!doctype html>${html}`);
   });
