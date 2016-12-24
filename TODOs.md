@@ -6,12 +6,13 @@
 
 ## Backlogs
 ### Stories
-* Render hello, react component
-* Add login button on right upper side
-* Hello, react-router!
+* Hello, universal-router!
 
 ### Research
 * Meta tags
 
 ### Infrastructure
+* Apply webpack
+* Apply style-loader
+* Apply next-css
 * Apply flow.js

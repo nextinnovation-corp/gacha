@@ -177,7 +177,7 @@
     }
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node server/index.js",
+    "dev": "nodemon --exec babel-node %NODE_DEBUG_OPTION% server/index.js",
     "eslint": "eslint server",
     "postinstall": "npm prune",
     "precommit": "npm run eslint"

@@ -3,14 +3,29 @@ import ReactDOMServer from 'react-dom/server';
 import express from 'express';
 import syncDatabase from '../scripts/syncDatabase';
 import Html from '../client/components/Html';
+import App from '../client/components/App';
 
 function runServer() {
   const app = express();
 
-  app.get('*', async (req, res) => {
+  app.get('*', (req, res, next) => {
+    try {
+      const html = ReactDOMServer.renderToStaticMarkup(
+        <Html title="Error">
+          {ReactDOMServer.renderToString(<App />)}
+        </Html>,
+      );
+      res.status(200);
+      res.send(`<!doctype html>${html}`);
+    } catch (e) {
+      next(new Error());
+    }
+  });
+
+  app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
     const html = ReactDOMServer.renderToStaticMarkup(
-      <Html title="Error">
-        Hello, error!
+      <Html title="Internal Server Error">
+        Page error
       </Html>,
     );
     res.status(500);
