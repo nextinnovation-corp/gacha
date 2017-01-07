@@ -5,6 +5,7 @@
 
 ## Backlogs
 ### Stories
+* Add map marker components
 
 ### Research
 * Meta tags
