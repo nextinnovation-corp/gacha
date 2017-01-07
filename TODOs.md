@@ -10,7 +10,6 @@
 * Meta tags
 
 ### Infrastructure
-* Apply css reset script
 * Apply css hot reloading
 * Apply next-css
 * Apply flow.js
