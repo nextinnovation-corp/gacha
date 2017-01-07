@@ -1,18 +1,17 @@
 # My task manager
 
 ## current story
-* Apply webpack - Maybe it end? Check it and resolve it.
-
 
 
 ## Backlogs
 ### Stories
-* Hello, universal-router!
 
 ### Research
 * Meta tags
 
 ### Infrastructure
-* Apply style-loader
+* Apply css reset script
+* Apply css hot reloading
 * Apply next-css
 * Apply flow.js
+* Apply universal rendering

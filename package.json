@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "express": "^4.14.0",
+    "google-map-react": "^0.22.3",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "sequelize": "^3.28.0",
@@ -180,8 +181,7 @@
     "nodemon": "nodemon --exec babel-node %NODE_DEBUG_OPTION% server/index.js",
     "dev": "babel-node %NODE_DEBUG_OPTION% server/index.js",
     "eslint": "eslint server client",
-    "postinstall": "npm prune",
-    "precommit": "npm run eslint"
+    "postinstall": "npm prune"
   },
   "old_scripts": {
     "lint:js": "eslint src tools",
