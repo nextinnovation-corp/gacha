@@ -1,6 +1,7 @@
 # My task manager
 
 ## current story
+* Apply webpack - Maybe it end? Check it and resolve it.
 
 
 
@@ -12,7 +13,6 @@
 * Meta tags
 
 ### Infrastructure
-* Apply webpack
 * Apply style-loader
 * Apply next-css
 * Apply flow.js

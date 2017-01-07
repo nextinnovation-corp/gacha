@@ -11,13 +11,13 @@ class Html extends React.Component {
 
     return (
       <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <title>{title}</title>
-      </head>
-      <body>
-        <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
-      </body>
+        <head>
+          <meta charSet="utf-8" />
+          <title>{title}</title>
+        </head>
+        <body>
+          <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
+        </body>
       </html>
     );
   }
