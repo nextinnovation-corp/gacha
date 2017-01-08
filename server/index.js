@@ -8,10 +8,11 @@ import syncDatabase from '../scripts/syncDatabase';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackConfig from '../scripts/webpack.conf';
+
 const compiler = webpack(webpackConfig);
-import path from 'path';
 
 function runServer() {
+
   const app = express();
 
   app.use(webpackDevMiddleware(compiler, {

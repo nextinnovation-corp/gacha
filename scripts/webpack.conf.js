@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'cheap-eval-source-map',
+  devtool: '#cheap-eval-source-map',
 
   entry: {
     client: [
@@ -35,7 +35,8 @@ module.exports = {
       }, {
         loader: 'css-loader',
         options: {
-          modules: true
+          modules: true,
+          localIdentName: '[path][name]-[local]',
         },
       }]
     }],
