@@ -1,0 +1,27 @@
+.restaurantMarker {
+  position: relative;
+  display: flex;
+}
+
+.marker {
+  font-size: 36px;
+  color: #FFB000;
+}
+
+.tooltip {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  margin-top: -8px;
+  margin-left: 10px;
+  height: 30px;
+  padding: 10px;
+  z-index: 10;
+  border: 1px solid #FFB000;
+  color: black;
+  background-color: rgba(255, 176, 00, 1);
+}
+
+.tooltip > h3 {
+  font-size: 22px;
+}

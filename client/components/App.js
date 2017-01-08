@@ -3,15 +3,9 @@ import GoogleMap from 'google-map-react';
 import { connect } from 'react-redux'
 import { googleMap } from '../../config';
 import { getCurrentLocation } from '../actions/user';
+import RestaurantMarker from './markers/RestaurantMarker';
+import './base.css';
 import styles from './App.css';
-
-const Marker = () => (
-  <div>
-    <i style={{fontSize: '96px'}} className="material-icons">
-      restaurant
-    </i>
-  </div>
-);
 
 class App extends React.Component {
   componentDidMount() {
@@ -30,11 +24,11 @@ class App extends React.Component {
             lat: this.props.currentLocation.lat,
             lng: this.props.currentLocation.lng,
           }}
-          defaultZoom={15}>
-          <Marker
+          defaultZoom={18}>
+          <RestaurantMarker
             lat={this.props.currentLocation.lat}
             lng={this.props.currentLocation.lng}
-            text="hi"
+            name="집"
           />
         </GoogleMap>
       </main>

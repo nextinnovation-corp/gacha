@@ -5,7 +5,7 @@
 
 ## Backlogs
 ### Stories
-* Add map marker components
+* Clean README.md
 
 ### Research
 * Meta tags
