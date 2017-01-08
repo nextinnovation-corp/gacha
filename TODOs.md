@@ -5,7 +5,6 @@
 
 ## Backlogs
 ### Stories
-* Clean README.md
 
 ### Research
 * Meta tags
