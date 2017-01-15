@@ -1,0 +1,9 @@
+.addLocationButton {
+  position: absolute;
+  display: inline;
+  bottom: 40px;
+  right: 30px;
+  font-size: 60px;
+  color: orange;
+  z-index: 5;
+}
