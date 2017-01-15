@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { googleMap } from '../../config';
 import { getCurrentLocation } from '../actions/user';
 import RestaurantMarker from './markers/RestaurantMarker';
+import SearchBox from './search/SearchBox';
 import './base.css';
 import styles from './App.css';
 
@@ -15,6 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <main style={{position: 'relative', width: '100%', height: '100vh', margin: '0'}}>
+        <SearchBox />
         <GoogleMap
           bootstrapURLKeys={{
             key: googleMap.API_KEY,

@@ -5,12 +5,12 @@
 
 ## Backlogs
 ### Stories
+* Add marker function
 
 ### Research
 * Meta tags
 
 ### Infrastructure
-* Apply css hot reloading
 * Apply next-css
 * Apply flow.js
 * Apply universal rendering
