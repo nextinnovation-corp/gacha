@@ -2,7 +2,6 @@
 
 ## current story
 
-
 ## Backlogs
 ### Stories
 * Add marker function

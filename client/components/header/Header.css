@@ -1,0 +1,37 @@
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 4px 0;
+  background-color: #FFB000;
+  z-index: 10;
+}
+
+.title {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  margin-left: -4px;
+}
+
+.label {
+  display: inline;
+  color: #fff;
+  margin-left: -8px;
+  padding: 0 8px;
+}
+
+.signIn {
+  flex-shrink: 0;
+  display: inline-flex;
+  padding: 0 12px 0 24px;
+}

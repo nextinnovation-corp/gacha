@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 import { googleMap } from '../../config';
 import { getCurrentLocation } from '../actions/user';
 import RestaurantMarker from './markers/RestaurantMarker';
-import SearchBox from './search/SearchBox';
 import AddLocationButton from './buttons/AddLocationButton';
+import Header from './header/Header';
 import './base.css';
 import s from './App.css';
 
@@ -16,30 +16,32 @@ class App extends React.Component {
 
   render() {
     return (
-      <main style={{position: 'relative', width: '100%', height: '100vh', margin: '0'}}>
-        <SearchBox />
-        <AddLocationButton />
-        <GoogleMap
-          bootstrapURLKeys={{
+      <div className={s.app}>
+        <Header />
+        <main className={s.map}>
+          <AddLocationButton />
+          <GoogleMap
+            bootstrapURLKeys={{
             key: googleMap.API_KEY,
             language: 'en',
           }}
-          center={{
+            center={{
             lat: this.props.currentLocation.lat,
             lng: this.props.currentLocation.lng,
           }}
-          defaultZoom={18}
-          options={{
+            defaultZoom={18}
+            options={{
             zoomControl: false
           }}
-        >
-          <RestaurantMarker
-            lat={this.props.currentLocation.lat}
-            lng={this.props.currentLocation.lng}
-            name="집"
-          />
-        </GoogleMap>
-      </main>
+          >
+            <RestaurantMarker
+              lat={this.props.currentLocation.lat}
+              lng={this.props.currentLocation.lng}
+              name="집"
+            />
+          </GoogleMap>
+        </main>
+      </div>
     );
   }
 }

@@ -4,7 +4,6 @@ import s from './SearchBox.css';
 export default class SearchBox extends React.Component {
   onSubmit = e => {
     e.preventDefault();
-
   };
 
   render() {

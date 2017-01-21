@@ -38,7 +38,13 @@ module.exports = {
           modules: true,
           localIdentName: '[path][name]-[local]',
         },
-      }]
+      }],
+    }, {
+      test: /\.png$/,
+      loader: 'url-loader',
+      options: {
+        limit: 10000,
+      },
     }],
   },
 

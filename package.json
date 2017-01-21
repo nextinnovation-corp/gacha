@@ -180,7 +180,8 @@
   },
   "scripts": {
     "nodemon": "nodemon --exec babel-node %NODE_DEBUG_OPTION% server/index.js",
-    "dev": "babel-node %NODE_DEBUG_OPTION% server/index.js",
+    "start:dev": "babel-node server/index.js",
+    "debugger": "babel-node %NODE_DEBUG_OPTION% server/index.js",
     "eslint": "eslint server client",
     "postinstall": "npm prune"
   },
