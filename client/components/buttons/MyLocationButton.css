@@ -1,3 +1,7 @@
 .myLocationButton {
   display: inline-flex;
 }
+
+.myLocationButton:hover {
+  cursor: pointer;
+}
