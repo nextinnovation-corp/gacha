@@ -1,6 +1,7 @@
 # My task manager
 
 ## current story
+* Add my location button
 
 ## Backlogs
 ### Stories
@@ -11,5 +12,4 @@
 
 ### Infrastructure
 * Apply next-css
-* Apply flow.js
 * Apply universal rendering

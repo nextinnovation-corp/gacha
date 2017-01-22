@@ -2,9 +2,13 @@ import React from 'react';
 import cx from 'classnames';
 import s from './AddLocationButton.css';
 
-export default function AddLocationButton() {
+type PropsType = {
+  className?: string
+}
+
+export default function AddLocationButton(props: PropsType = {}) {
   return (
-    <i className={cx('material-icons', s.addLocationButton)}>
+    <i className={cx('material-icons', s.addLocationButton, props.className)}>
       add_location
     </i>
   );

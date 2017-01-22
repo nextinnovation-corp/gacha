@@ -5,6 +5,7 @@ import { googleMap } from '../../config';
 import { getCurrentLocation } from '../actions/user';
 import RestaurantMarker from './markers/RestaurantMarker';
 import AddLocationButton from './buttons/AddLocationButton';
+import MyLocationButton from './buttons/MyLocationButton';
 import Header from './header/Header';
 import './base.css';
 import s from './App.css';
@@ -19,7 +20,8 @@ class App extends React.Component {
       <div className={s.app}>
         <Header />
         <main className={s.map}>
-          <AddLocationButton />
+          <MyLocationButton className={s.myLocationButton} />
+          <AddLocationButton className={s.addLocationButton} />
           <GoogleMap
             bootstrapURLKeys={{
             key: googleMap.API_KEY,
