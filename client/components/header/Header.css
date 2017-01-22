@@ -15,19 +15,18 @@
   display: flex;
   align-items: center;
   padding: 0 6px;
+  margin-right: 4px;
 }
 
 .icon {
-  width: 48px;
-  height: 48px;
-  margin-left: -4px;
+  width: 30px;
+  height: 30px;
+  padding: 4px;
 }
 
 .label {
   display: inline;
   color: #fff;
-  margin-left: -8px;
-  padding: 0 8px;
 }
 
 .signIn {

@@ -7,6 +7,7 @@ module.exports = {
 
   entry: {
     client: [
+      'regenerator-runtime/runtime',
       'webpack-hot-middleware/client',
       './client/index.js']
   },
@@ -21,6 +22,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loader: 'babel-loader',
+      exclude: /node_modules/,
       query: {
         // https://github.com/babel/babel-loader#options
         cacheDirectory: './build/cache',

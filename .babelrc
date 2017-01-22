@@ -13,6 +13,10 @@
         "imports": ["react"],
         "locals": ["module"]
       }]
+    }],
+    ["flow-runtime", {
+      "assert": true,
+      "annotate": true
     }]
   ]
 }
