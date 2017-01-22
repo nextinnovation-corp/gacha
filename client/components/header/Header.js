@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchBox from '../search/SearchBox';
 import { links } from '../../../config';
 import pikachu from './pikachu.png';
 import squirtle from './squirtle.png';
@@ -13,6 +12,19 @@ function getIconImage() {
 }
 
 export default class Header extends React.Component {
+  componentDidMount() {
+    this.initGoogleAddressAutoComplete();
+  }
+
+  onSubmit = e => {
+    e.preventDefault();
+  };
+
+  initGoogleAddressAutoComplete = () => {
+    const input = this.input;
+    new google.maps.places.Autocomplete(input);
+  };
+
   render() {
     const iconImage = getIconImage();
 
@@ -30,7 +42,21 @@ export default class Header extends React.Component {
             GACHA
           </h1>
         </a>
-        <SearchBox />
+        <div className={s.searchBox}>
+          <form
+            className={s.searchForm}
+            onSubmit={this.onSubmit}
+          >
+            <input
+              ref={input => { this.input = input; }}
+              className={s.searchInput}
+              placeholder="찾고 싶은 지역을 입력하세요."
+            />
+            <button className={s.searchButton}>
+              <i className="fa fa-search" />
+            </button>
+          </form>
+        </div>
         <div className={s.signIn}>
           <div
             className="fb-login-button"

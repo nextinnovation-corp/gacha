@@ -34,3 +34,52 @@
   display: inline-flex;
   padding: 0 12px 0 24px;
 }
+
+.searchBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 4px;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 4px;
+}
+
+.searchInput {
+  flex-grow: 1;
+  width: 60%;
+  height: 40px;
+  padding: 0 6px;
+  border: 0;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.searchInput:active,
+.searchInput:focus {
+  outline: 0;
+}
+
+.searchButton {
+  width: 40px;
+  height: 40px;
+  margin: 0 8px;
+  border: 0;
+  color: #FFB000;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.searchButton:active,
+.searchInput:focus {
+  outline: 0;
+}

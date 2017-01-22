@@ -37,16 +37,12 @@ class App extends React.Component {
           />
           <AddLocationButton className={s.addLocationButton} />
           <GoogleMap
-            bootstrapURLKeys={{
-                key: googleMap.API_KEY,
-                language: 'en',
-              }}
-              center={{
-                lat: this.props.map.center.lat,
-                lng: this.props.map.center.lng,
-              }}
-              defaultZoom={18}
-              options={{
+            center={{
+              lat: this.props.map.center.lat,
+              lng: this.props.map.center.lng,
+            }}
+            defaultZoom={18}
+            options={{
               zoomControl: false
             }}
           >

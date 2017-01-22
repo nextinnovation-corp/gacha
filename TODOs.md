@@ -1,11 +1,11 @@
 # My task manager
 
 ## current story
-* Add my location button
 
 ## Backlogs
 ### Stories
 * Add marker function
+* Add real search and move camera to that logic
 
 ### Research
 * Meta tags
