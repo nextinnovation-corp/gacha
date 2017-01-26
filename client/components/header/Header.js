@@ -1,8 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import { links } from '../../../config';
 import pikachu from './pikachu.png';
 import squirtle from './squirtle.png';
 import chamander from './charmander.png';
+import { setCenter } from '../../actions/map';
 import s from './Header.css';
 
 const icons = [pikachu, squirtle, chamander];
@@ -11,7 +13,7 @@ function getIconImage() {
   return icons[rndIndex];
 }
 
-export default class Header extends React.Component {
+class Header extends React.Component {
   componentDidMount() {
     this.initGoogleAddressAutoComplete();
   }
@@ -22,7 +24,13 @@ export default class Header extends React.Component {
 
   initGoogleAddressAutoComplete = () => {
     const input = this.input;
-    new google.maps.places.Autocomplete(input);
+    const autoComplete = new google.maps.places.Autocomplete(input);
+    autoComplete.addListener('place_changed', () => {
+      const place = autoComplete.getPlace();
+      const lat = place.geometry.location.lat();
+      const lng = place.geometry.location.lng();
+      this.props.setCenter(lat, lng);
+    });
   };
 
   render() {
@@ -69,3 +77,12 @@ export default class Header extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+});
+
+const mapDispatchToProps = {
+  setCenter
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

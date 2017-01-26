@@ -13,8 +13,10 @@ export default function mapReducer(state = initialState, action) {
     case SET_CENTER:
       return update(state, {
         center: {
-          lat: {$set: action.lat},
-          lng: {$set: action.lng},
+          $set: {
+            lat: action.lat,
+            lng: action.lng,
+          },
         },
       });
 

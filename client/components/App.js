@@ -27,6 +27,11 @@ class App extends React.Component {
 //   />
 
   render() {
+    const mapCenter = {
+      lat: this.props.map.center.lat,
+      lng: this.props.map.center.lng,
+    };
+
     return (
       <div className={s.app}>
         <Header />
@@ -37,10 +42,7 @@ class App extends React.Component {
           />
           <AddLocationButton className={s.addLocationButton} />
           <GoogleMap
-            center={{
-              lat: this.props.map.center.lat,
-              lng: this.props.map.center.lng,
-            }}
+            center={mapCenter}
             defaultZoom={18}
             options={{
               zoomControl: false
