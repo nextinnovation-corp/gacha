@@ -4,7 +4,7 @@ import { links } from '../../../config';
 import pikachu from './pikachu.png';
 import squirtle from './squirtle.png';
 import chamander from './charmander.png';
-import { setCenter } from '../../actions/map';
+import { SEARCH_MAP_TAG_ID } from '../../actions/header';
 import s from './Header.css';
 
 const icons = [pikachu, squirtle, chamander];
@@ -14,23 +14,8 @@ function getIconImage() {
 }
 
 class Header extends React.Component {
-  componentDidMount() {
-    this.initGoogleAddressAutoComplete();
-  }
-
   onSubmit = e => {
     e.preventDefault();
-  };
-
-  initGoogleAddressAutoComplete = () => {
-    const input = this.input;
-    const autoComplete = new google.maps.places.Autocomplete(input);
-    autoComplete.addListener('place_changed', () => {
-      const place = autoComplete.getPlace();
-      const lat = place.geometry.location.lat();
-      const lng = place.geometry.location.lng();
-      this.props.setCenter(lat, lng);
-    });
   };
 
   render() {
@@ -56,7 +41,7 @@ class Header extends React.Component {
             onSubmit={this.onSubmit}
           >
             <input
-              ref={input => { this.input = input; }}
+              id={SEARCH_MAP_TAG_ID}
               className={s.searchInput}
               placeholder="찾고 싶은 지역을 입력하세요."
             />
@@ -82,7 +67,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  setCenter
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
