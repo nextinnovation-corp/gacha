@@ -1,8 +1,7 @@
 # My task manager
 
 ## current story
-* Remove no geometry auto complete result
-  - disable auto-complete search api when user key down arrow
+* Refactoring google map service
 
 ## Backlogs
 ### Bugs

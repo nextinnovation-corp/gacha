@@ -5,6 +5,12 @@ const prefix = 'map';
 export const SET_CENTER = `${prefix}/SET_CENTER`;
 export const SET_MAP = `${prefix}/SET_MAP';`
 
+let map;
+
+export function getMap() {
+  return map;
+}
+
 export function initMap(tagId) {
   return dispatch => {
     const script = document.createElement('script');
@@ -14,7 +20,7 @@ export function initMap(tagId) {
     script.defer = true;
 
     window[callbackFunctionName] = () => {
-      const map = new google.maps.Map(document.getElementById(tagId), {
+      map = new google.maps.Map(document.getElementById(tagId), {
         center: {lat: -34.397, lng: 150.644},
         zoom: 8
       });
@@ -36,6 +42,9 @@ function setMap(map) {
 }
 
 export function setCenter(lat: number, lng: number) {
+  map.setCenter({lat, lng});
+  map.setZoom(18);
+
   return {
     type: SET_CENTER,
     lat,
