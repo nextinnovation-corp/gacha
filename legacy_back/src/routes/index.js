@@ -16,15 +16,15 @@ export default {
 
   // Keep in mind, routes are evaluated in order
   children: [
-    require('./home').default,
-    require('./contact').default,
-    require('./login').default,
-    require('./register').default,
-    require('./admin').default,
+    require('./home/index').default,
+    require('./contact/index').default,
+    require('./login/index').default,
+    require('./register/index').default,
+    require('./admin/index').default,
 
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
-    require('./content').default,
-    require('./notFound').default,
+    require('./content/index').default,
+    require('./notFound/index').default,
   ],
 
   async action({ next }) {
