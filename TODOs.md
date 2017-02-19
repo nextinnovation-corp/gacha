@@ -1,7 +1,6 @@
 # My task manager
 
 ## current story
-* Disable form search cache on chrome
 
 ## Backlogs
 ### Bugs

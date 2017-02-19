@@ -44,6 +44,7 @@ export class Header extends React.Component {
           <form
             className={s.searchForm}
             onSubmit={this.onSubmit}
+            autoComplete="off"
           >
             <input
               id={'search'}
