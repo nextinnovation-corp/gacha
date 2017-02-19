@@ -1,7 +1,7 @@
 # My task manager
 
 ## current story
-* Refactoring google map service
+* Disable form search cache on chrome
 
 ## Backlogs
 ### Bugs

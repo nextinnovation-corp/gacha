@@ -1,28 +1,18 @@
 // @flow
 import React from 'react';
-import { connect } from 'react-redux'
-import { initMap } from '../../actions/map';
 import s from './Map.css';
+import { initMapService } from '../../services/mapService';
+import { initAutoCompleteService } from '../../services/autoCompleteService';
 
-const mapTagId = 'map';
-
-class Map extends React.Component {
-  componentWillMount() {
-    this.props.initMap(mapTagId);
+export default class Map extends React.Component {
+  componentDidMount() {
+    const map = initMapService('map');
+    initAutoCompleteService(map);
   }
 
   render() {
     return (
-      <div id={mapTagId} className={s.map} />
+      <div id="map" className={s.map} />
     );
   }
 }
-
-const mapStateToProps = state => ({
-});
-
-const mapDispatchToProps = {
-  initMap
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Map);

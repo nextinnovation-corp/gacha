@@ -4,8 +4,8 @@ import { links } from '../../../config';
 import pikachu from './pikachu.png';
 import squirtle from './squirtle.png';
 import chamander from './charmander.png';
-import { SEARCH_MAP_TAG_ID } from '../../actions/header';
 import s from './Header.css';
+import { search } from '../../actions/header';
 
 const icons = [pikachu, squirtle, chamander];
 function getIconImage() {
@@ -13,9 +13,14 @@ function getIconImage() {
   return icons[rndIndex];
 }
 
-class Header extends React.Component {
+export class Header extends React.Component {
+  state = {
+    searchKeyword: ''
+  };
+
   onSubmit = e => {
     e.preventDefault();
+    this.props.search(this.state.searchKeyword);
   };
 
   render() {
@@ -41,9 +46,11 @@ class Header extends React.Component {
             onSubmit={this.onSubmit}
           >
             <input
-              id={SEARCH_MAP_TAG_ID}
+              id={'search'}
               className={s.searchInput}
               placeholder="찾고 싶은 지역을 입력하세요."
+              value={this.state.searchKeyword}
+              onChange={e => this.setState({searchKeyword: e.target.value})}
             />
             <button className={s.searchButton}>
               <i className="fa fa-search" />
@@ -63,10 +70,8 @@ class Header extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-});
-
 const mapDispatchToProps = {
+  search
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(null, mapDispatchToProps)(Header);
