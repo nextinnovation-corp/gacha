@@ -6,6 +6,7 @@ import squirtle from './squirtle.png';
 import chamander from './charmander.png';
 import s from './Header.css';
 import { search } from '../../actions/header';
+import LoginButton from '../../components/buttons/LoginButton';
 
 const icons = [pikachu, squirtle, chamander];
 function getIconImage() {
@@ -58,14 +59,7 @@ export class Header extends React.Component {
             </button>
           </form>
         </div>
-        <div className={s.signIn}>
-          <div
-            className="fb-login-button"
-            data-max-rows="1"
-            data-size="medium"
-            data-show-faces="false"
-            data-auto-logout-link="false"/>
-        </div>
+        <LoginButton />
       </div>
     );
   }
@@ -73,6 +67,14 @@ export class Header extends React.Component {
 
 const mapDispatchToProps = {
   search
+  //   <div className={s.signIn}>
+  // <div
+  //   className="fb-login-button"
+  //   data-max-rows="1"
+  //   data-size="medium"
+  //   data-show-faces="false"
+  //   data-auto-logout-link="false"/>
+  // </div>
 };
 
 export default connect(null, mapDispatchToProps)(Header);

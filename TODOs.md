@@ -18,3 +18,4 @@
 * Add abstract layer of google api. prevents code fail after version update (https://developers.google.com/maps/documentation/javascript/reference#Autocomplete)
 * Apply next-css
 * Apply universal rendering
+* Apply css modules
